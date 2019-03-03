@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Title</title>
+</head>
+<body>
+
+<form action="{% url 'about' %}">
+    <input type="submit" value="About">
+</form>
+<h1>WORD COUNT</h1>
+
+<!-- do action wpisujemy gdzie ostatecznie wylądujemy żeby policzyć słowa-->
+<!-- 'count' to jest name 'count' z view count ->>
+<!-- moglibysmy dac action="count" i brałoby z views po linku count/ -->
+<!-- sposobem poniżej możemy potem modyfikować url -->
+<form action="{% url 'count' %}">
+    <textarea cols="40" rows="5" name="fulltext"></textarea>
+    <br />
+    <!--button below-->
+    <input type="submit" value="Count!"/>
+</form>
+
+<!--<h2>{{ 'hi there' }}</h2>*/-->
+
+</body>
+</html>
